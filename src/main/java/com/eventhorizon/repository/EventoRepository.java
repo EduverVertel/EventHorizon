@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package com.eventhorizon.repository;
 
-/**
- *
- * @author eduve
- */
-public class EventoRepository {
+import com.eventhorizon.entity.Evento;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface EventoRepository extends JpaRepository<Evento, Long> {
 }
