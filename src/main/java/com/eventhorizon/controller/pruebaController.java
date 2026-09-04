@@ -44,16 +44,5 @@ public class PruebaController {
     @GetMapping("/buscar")
     public String buscar(@RequestParam String nombre) {
         return "Buscando eventos relacionados con: " + nombre;
-    }
-    
-    @GetMapping("/evento-prueba")
-    public Evento eventoPrueba() {
-        return new Evento(
-            1L,
-            "Concierto Universitario",
-            "Apartadó"
-        );
-    }
-    
-    
+    } 
 }
