@@ -9,17 +9,6 @@ import com.eventhorizon.service.EventoService;
 
 @RestController
 public class PruebaController {
-    
-    private final EventoService eventoService;
-
-    public PruebaController(EventoService eventoService) {
-        this.eventoService = eventoService;
-    }
-    
-    @GetMapping("/mensaje")
-    public String mensaje() {
-        return eventoService.obtenerMensaje();
-    }
 
     @GetMapping("/")
     public String inicio() {
@@ -30,19 +19,4 @@ public class PruebaController {
     public String hola() {
         return "Hola desde Spring Boot";
     }
-
-    @GetMapping("/eventos")
-    public String eventos() {
-        return "Aquí estarán los eventos de EventHorizon";
-    }
-    
-    @GetMapping("/eventos/{id}")
-    public String evento(@PathVariable Long id) {
-        return "Estás consultando el evento con ID: " + id;
-    }
-    
-    @GetMapping("/buscar")
-    public String buscar(@RequestParam String nombre) {
-        return "Buscando eventos relacionados con: " + nombre;
-    } 
 }
