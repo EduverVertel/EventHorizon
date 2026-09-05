@@ -19,6 +19,10 @@ public class LocalidadService {
     public List<Localidad> listarTodas() {
         return localidadRepository.findAll();
     }
+    
+    public List<Localidad> listarPorEvento(Long eventoId) {
+        return localidadRepository.findByEventoId(eventoId);
+    }
 
     public Optional<Localidad> buscarPorId(Long id) {
         return localidadRepository.findById(id);
