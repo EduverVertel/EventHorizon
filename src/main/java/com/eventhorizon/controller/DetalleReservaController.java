@@ -11,8 +11,7 @@ import java.util.Optional;
 @RequestMapping("/detalles-reserva")
 public class DetalleReservaController {
 
-    private final Detalle@RequestMapping("/detalles-reserva")
-ReservaService detalleReservaService;
+    private final DetalleReservaService detalleReservaService;
 
     public DetalleReservaController(DetalleReservaService detalleReservaService) {
         this.detalleReservaService = detalleReservaService;
