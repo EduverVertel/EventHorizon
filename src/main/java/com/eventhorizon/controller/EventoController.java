@@ -37,6 +37,15 @@ public class EventoController {
         return eventoService.guardar(evento);
     }
 
+    @PutMapping("/{id}")
+    public Evento actualizar(@PathVariable Long id,
+                             @RequestBody Evento evento) {
+
+        evento.setId(id);
+
+        return eventoService.guardar(evento);
+    }
+
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         eventoService.eliminar(id);

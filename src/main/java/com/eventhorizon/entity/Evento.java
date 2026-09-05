@@ -2,6 +2,7 @@ package com.eventhorizon.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -136,5 +137,9 @@ public class Evento {
     
     public void setLugar(Lugar lugar) {
         this.lugar = lugar;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
